@@ -3,8 +3,8 @@ interface LoginValues {
   password: string;
 }
 interface RegisterValues {
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   email: string;
   password: string;
 }

@@ -31,8 +31,8 @@ const Register: FC = () => {
           validationSchema={registerSchema}
         >
           <Form className="space-y-8">
-            <Input label="Adınız" name="firstname" type="text" />
-            <Input label="Soyadınız" name="lastname" type="text" />
+            <Input label="Adınız" name="firstName" type="text" />
+            <Input label="Soyadınız" name="lastName" type="text" />
             <Input label="Email Adresiniz" name="email" type="text" />
             <Input label="Şifreniz" name="password" type="password" />
 

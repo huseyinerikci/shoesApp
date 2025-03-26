@@ -6,8 +6,8 @@ export const initialLoginValues: LoginValues = {
 };
 
 export const initialRegisterValues: RegisterValues = {
-  firstname: "",
-  lastname: "",
+  firstName: "",
+  lastName: "",
   email: "",
   password: "",
 };
