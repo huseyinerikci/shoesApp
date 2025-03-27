@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import useUser from "../../hooks/useUser";
 import { FaSearch, FaUserAlt } from "react-icons/fa";
@@ -6,17 +6,33 @@ import { Link } from "react-router-dom";
 
 const UserInfo: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, isLoading, error } = useUser();
+  const { user } = useUser();
   const { logout } = useAuth();
+  const dropdownRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [user]);
   return (
     <div className="flex gap-6 xl:gap-10">
       <button className="md:text-xl xl:text-2xl max-md:hidden cursor-pointer">
         <FaSearch />
       </button>
-      <button className="relative  md:text-lg cursor-pointer">
+      <button ref={dropdownRef} className="relative  md:text-lg cursor-pointer">
         <FaUserAlt onClick={() => setIsOpen(!isOpen)} />
-        {isOpen && (
-          <div className="absolute top-10 -right-15 md:-right-18 md:top-12  xl:-right-25 xl:top-15 rounded-md bg-white shadow-lg">
+        {user && isOpen && (
+          <div className="absolute top-10 -right-15 md:-right-18 md:top-12  xl:-right-25 xl:top-15 rounded-md bg-white shadow-lg z-[99]">
             <button className="header-button font-semibold">
               {user.firstName} {user.lastName}
             </button>
