@@ -25,6 +25,9 @@ exports.protect = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
+    if (error.message === "jwt expired") {
+      return res.status(401).json({ message: "Access token expired" });
+    }
     res.status(401).json({ message: "Not authorized to access this route" });
   }
 };

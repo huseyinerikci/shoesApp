@@ -6,7 +6,7 @@ const Heading: FC = () => {
       <h1 className="font-semibold uppercase text-2xl md:text-4xl lg:text-6xl xl:text-[74px] leading-[96%]">
         Yeni ürünleri <br /> kaçırma
       </h1>
-      <button className="bg-my-blue text-white py-3 px-4 lg:py-4 lg:px-8 rounded-lg hover:brightness-90 transition cursor-pointer">
+      <button className="bg-my-blue text-white py-2 px-3 lg:py-3 lg:px-7 rounded-lg hover:brightness-90 transition cursor-pointer">
         Alışverişe Başla
       </button>
     </div>

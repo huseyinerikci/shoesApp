@@ -52,11 +52,11 @@ interface ShoeFormValues {
   name: string;
   description: string;
   isNew: boolean;
-  discount: number;
+  discount: string;
   size: string;
   color: string;
   gender: string;
-  price: number;
+  price: string;
 }
 
 export type {

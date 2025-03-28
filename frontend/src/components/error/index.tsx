@@ -1,7 +1,9 @@
 import { FC } from "react";
-
-const Error: FC = () => {
-  return <div>Error</div>;
+interface Props {
+  message: string;
+}
+const Error: FC<Props> = ({ message }) => {
+  return <div>{message}</div>;
 };
 
 export default Error;
