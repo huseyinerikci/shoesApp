@@ -15,7 +15,7 @@ const Hero: FC = () => {
           seansınıza tüm odağınızı verebilmenizi sağlar.
         </p>
       </div>
-      <img src="/hero.png" alt="hero" />
+      <img className="w-full" src="/banner.png" alt="banner" />
     </div>
   );
 };

@@ -43,7 +43,7 @@ const Form: FC<Props> = ({ onSubmit, data }) => {
           className="bg-my-blue py-1 px-4 rounded-md text-white transition hover:bg-my-blue/80 cursor-pointer"
           type="submit"
         >
-          Gönder
+          {data ? "Düzenle" : "Oluştur"}
         </button>
       </FormikForm>
     </Formik>

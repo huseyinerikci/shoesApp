@@ -5,9 +5,9 @@ interface Props {
 }
 const Images: FC<Props> = ({ pictures }) => {
   return (
-    <div className="grid grid-cols-2 gap-4 rounded-[48px] h-fit">
+    <div className="grid grid-cols-2 gap-4 rounded-[48px] h-fit ">
       {pictures.map((url, key) => (
-        <img src={url} key={key} />
+        <img src={`/${url}`} key={key} className="xl:w-full" />
       ))}
     </div>
   );

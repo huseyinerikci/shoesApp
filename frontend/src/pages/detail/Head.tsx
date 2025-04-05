@@ -14,15 +14,12 @@ const Head: FC<Props> = ({ item }) => {
       <h1 className="font-semibold text-2xl md:text-[28px] lg:text-[32px] mt-[55px]">
         {item.name}
       </h1>
-      <p
-        className="text-2xl flex gap-1
-      "
-      >
-        <Price item={item} designs="text-my-blue" />
-        {item.discount && (
+      <div className="text-2xl flex gap-1">
+        <Price item={item} designs="!text-my-blue" />
+        {item.discount != 0 && (
           <span className="line-through ps-3">${item.price}</span>
         )}
-      </p>
+      </div>
     </div>
   );
 };

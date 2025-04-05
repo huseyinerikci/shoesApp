@@ -19,6 +19,7 @@ const Color: FC<Props> = ({ colors }) => {
           const isSelected = selected === id;
           return (
             <div
+              key={id}
               className={isSelected ? "ring-3 ring-my-blue rounded-full" : ""}
             >
               <div

@@ -17,11 +17,11 @@ const Detail: FC = () => {
   if (isLoading) return <Loader />;
   if (error) return <Error message={error.message} />;
   return (
-    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-4 ">
-      <div className="xl:col-span-2">
+    <div className="grid md:grid-cols-2  gap-6 md:gap-4 ">
+      <div className="xl:col-span-1">
         <Images pictures={data?.picture!} />
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 ">
         <Head item={data!} />
         <Color colors={data?.color!} />
         <Size sizes={data?.size!} />

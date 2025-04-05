@@ -13,7 +13,7 @@ const Card: FC<Props> = ({ shoe }) => {
         <div className="relative p-2 bg-white rounded-2xl xl:rounded-3xl">
           <Badge item={shoe} />
           <img
-            className="rounded-xl xl:rounded-3xl"
+            className="w-full rounded-xl xl:rounded-3xl"
             src={shoe.picture[0]}
             alt={shoe.name}
           />
@@ -26,7 +26,7 @@ const Card: FC<Props> = ({ shoe }) => {
         to={`/shoe/${shoe._id}`}
         className="bg-grey-dark text-white font-medium px-4 py-2 rounded-lg transition hover:bg-black text-center flex items-center justify-center gap-1"
       >
-        Detay - <Price item={shoe} />
+        Detay - <Price item={shoe} designs="" />
       </Link>
     </div>
   );

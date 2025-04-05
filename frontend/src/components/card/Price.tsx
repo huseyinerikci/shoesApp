@@ -12,7 +12,9 @@ const Price: FC<Props> = ({ item, designs }) => {
   }
   return (
     <div
-      className={`${item.discount} ? "text-my-yellow" : "text-white" ${designs}`}
+      className={`${
+        item.discount ? "text-my-yellow" : "text-white"
+      } ${designs}`}
     >
       ${price.toFixed(2)}
     </div>

@@ -36,4 +36,5 @@ export const colors = [
   { code: "#677282", id: "gray" },
   { code: "#925513", id: "brown" },
   { code: "#BB8056", id: "light-brown" },
+  { code: "#ffffff", id: "white" },
 ];

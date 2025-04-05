@@ -154,6 +154,7 @@ router.post("/refresh", async (req, res) => {
     const accessToken = jwt.sign({ id: decoded.id }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRE,
     });
+
     // access tokenu cookie
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
