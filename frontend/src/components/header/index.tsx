@@ -21,7 +21,7 @@ const Header: FC = () => {
         <img src="/logo.svg" alt="logo" />
       </Link>
 
-      <div className="flex justify-end  items-center">
+      <div className="flex justify-end items-center">
         <UserInfo />
       </div>
     </div>

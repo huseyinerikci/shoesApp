@@ -14,7 +14,7 @@ const useAuth = () => {
       toast.success("Giriş başarılı");
     },
     onError: (error: any) => {
-      toast.error(error.response.data?.message || "Giriş başarısız");
+      toast.error(error?.response?.data?.message || "Giriş başarısız");
     },
   });
   const register = useMutation({
